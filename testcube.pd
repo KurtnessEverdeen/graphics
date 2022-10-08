@@ -1,0 +1,97 @@
+#N canvas 621 45 657 517 16;
+#X obj -466 257 gemwin;
+#X msg -396 258 0 \, destroy;
+#X msg -470 228 reset \, dimen 640 480 \, create \, 1;
+#X msg -397 281 fullscreen \$1;
+#X obj -292 278 tgl 23 0 empty empty Toggle_Fullscreen -15 -15 0 10
+-4032 -1 -1 0 1;
+#X msg -397 308 cursor \$1;
+#X obj -305 323 tgl 23 0 empty empty Toggle_Mouse -25 -10 0 15 -4160
+-1 -1 0 1;
+#X obj -319 599 dancecube;
+#X obj -533 565 gemhead;
+#X floatatom 71 273 5 0 0 0 - - -;
+#X obj -321 524 pack f f f;
+#X floatatom -362 492 5 0 0 0 - - -;
+#X floatatom -303 492 5 0 0 0 - - -;
+#X floatatom -246 491 5 0 0 0 - - -;
+#X floatatom 350 320 5 0 0 0 - - -;
+#X floatatom 130 294 5 0 0 0 - - -;
+#X obj -533 598 translateXYZ 0 0 -3;
+#X floatatom 282 311 5 0 0 0 - - -;
+#X obj 344 110 vsl 25 200 1.27 127 0 1 empty empty cube_repeat_trail
+0 -9 0 12 -4160 -4032 -1 0 1;
+#X obj 298 98 vsl 25 200 0 1 0 0 empty empty wander_permission 0 -9
+0 12 -45076 -245812 -1 0 1;
+#X obj 257 100 vsl 25 200 -20 20 0 0 empty empty z 0 -9 0 18 -128992
+-1 -1 10200 1;
+#X obj 222 99 vsl 25 200 -20 20 0 0 empty empty y 0 -9 0 18 -128992
+-1 -1 9800 1;
+#X obj 189 99 vsl 25 200 -20 20 0 0 empty empty x 0 -9 0 18 -128992
+-1 -1 9900 1;
+#X obj 135 83 vsl 25 200 0 1 0 0 empty empty color/draw_type 0 -9 0
+12 -159808 -1 -1 9200 1;
+#X obj 98 61 vsl 25 200 0 1 0 0 empty empty jitter_jump 0 -9 0 12 -4032
+-1 -1 9500 1;
+#X obj -323 441 t b f;
+#X obj -249 446 t b f;
+#X obj 699 718;
+#X obj 780 450;
+#X floatatom 189 315 5 0 0 0 - - -;
+#X floatatom 220 343 5 0 0 0 - - -;
+#X floatatom 257 372 5 0 0 0 - - -;
+#X obj -65 419 s \$0-jitter;
+#X obj -501 506 r \$0-jitter;
+#X obj 58 417 s \$0-colordraw;
+#X obj -535 470 r \$0-colordraw;
+#X obj 73 455 s \$0-x;
+#X obj -399 431 r \$0-x;
+#X obj -326 403 r \$0-y;
+#X obj 142 455 s \$0-y;
+#X obj 212 454 s \$0-z;
+#X obj -245 395 r \$0-z;
+#X obj 291 454 s \$0-wander;
+#X obj -262 553 r \$0-wander;
+#X obj 331 423 s \$0-rep;
+#X obj -184 585 r \$0-rep;
+#X obj 5 110 bng 50 250 50 0 empty empty Make_Window 17 7 0 10 -257985
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 8 0 16 0;
+#X connect 9 0 32 0;
+#X connect 10 0 7 3;
+#X connect 11 0 10 0;
+#X connect 12 0 10 1;
+#X connect 13 0 10 2;
+#X connect 14 0 44 0;
+#X connect 15 0 34 0;
+#X connect 16 0 7 0;
+#X connect 17 0 42 0;
+#X connect 18 0 14 0;
+#X connect 19 0 17 0;
+#X connect 20 0 31 0;
+#X connect 21 0 30 0;
+#X connect 22 0 29 0;
+#X connect 23 0 15 0;
+#X connect 24 0 9 0;
+#X connect 25 0 10 0;
+#X connect 25 1 12 0;
+#X connect 26 0 10 0;
+#X connect 26 1 13 0;
+#X connect 27 0 28 0;
+#X connect 29 0 36 0;
+#X connect 30 0 39 0;
+#X connect 31 0 40 0;
+#X connect 33 0 7 1;
+#X connect 35 0 7 2;
+#X connect 37 0 11 0;
+#X connect 38 0 25 0;
+#X connect 41 0 26 0;
+#X connect 43 0 7 4;
+#X connect 45 0 7 5;
+#X connect 46 0 2 0;
